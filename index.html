@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Bilder Upload Jens &amp; Ulrike</title>
+		<link href="dropzone.min.css" type="text/css" rel="stylesheet" />
+		<script src="dropzone.min.js"></script>		
+	</head>
+	<body>
+		<div id="dropZone" class="dropzone" style="width:100%; height:100%; border: 5px dashed red;border-radius:15px; font-size: 32px; font-size: 6vw;">
+		</div>
+		<script language="javascript">
+			Dropzone.autoDiscover = false;
+			var dropZoneOptions = {
+			  url: "upload.php",
+			  parallelUploads: 1,
+			  acceptedFiles: "image/*",
+			  dictDefaultMessage: "Hier klicken um Bilder hochzuladen",
+			  paramName: "file", // The name that will be used to transfer the file
+			  maxFilesize: 12 // MB
+			};
+
+			var myDropzone = new Dropzone("div#dropZone", dropZoneOptions);
+		</script>
+	</body>
+</html>
